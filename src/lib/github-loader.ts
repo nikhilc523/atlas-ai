@@ -1,0 +1,177 @@
+import { GithubRepoLoader } from "@langchain/community/document_loaders/web/github";
+import pLimit from 'p-limit'
+import { getSummary } from "./openai";
+import { getEmbeddings as getGeminiEmbeddings } from "./gemini";
+import { exit } from "process";
+import { db } from "@/server/db";
+import { Octokit } from "octokit";
+const getFileCount = async (path: string, octokit: Octokit, githubOwner: string, githubRepo: string, acc: number = 0) => {
+    const { data } = await octokit.rest.repos.getContent({
+        owner: githubOwner,
+        repo: githubRepo,
+        path: path
+    })
+
+    if (!Array.isArray(data) && data.type === 'file') {
+        return acc + 1
+    }
+
+    if (Array.isArray(data)) {
+        let fileCount = 0
+        const directories: string[] = []
+
+        // Count files and collect directories in current level
+        for (const item of data) {
+            if (item.type === 'dir') {
+                directories.push(item.path)
+            } else {
+                fileCount += 1
+            }
+        }
+
+        // Process all directories at this level in parallel
+        if (directories.length > 0) {
+            const directoryCounts = await Promise.all(
+                directories.map(dirPath =>
+                    getFileCount(dirPath, octokit, githubOwner, githubRepo, 0)
+                )
+            )
+            fileCount += directoryCounts.reduce((sum, count) => sum + count, 0)
+        }
+
+        return acc + fileCount
+    }
+
+    return acc
+}
+
+export const checkCredits = async (githubUrl: string, githubToken?: string) => {
+    const octokit = new Octokit({
+        auth: githubToken || process.env.GITHUB_TOKEN,
+    });
+    const githubOwner = githubUrl.split('/')[3]
+    const githubRepo = githubUrl.split('/')[4]
+    if (!githubOwner || !githubRepo) return 0
+    const fileCount = await getFileCount('', octokit, githubOwner, githubRepo, 0)
+    return fileCount
+}
+
+export const loadGithubRepo = async (githubUrl: string, githubToken?: string) => {
+    const loader = new GithubRepoLoader(
+        githubUrl,
+        {
+            branch: "main",
+            ignoreFiles: ['package-lock.json', 'bun.lockb'],
+            recursive: true,
+            // recursive: false,
+            accessToken: githubToken || process.env.GITHUB_TOKEN,
+            unknown: "warn",
+            maxConcurrency: 5, // Defaults to 2
+        }
+    );
+    const docs = await loader.load();
+    return docs
+};
+
+export const indexGithubRepo = async (projectId: string, githubUrl: string, githubToken?: string) => {
+    const docs = await loadGithubRepo(githubUrl, githubToken);
+    console.log(`Loaded ${docs.length} documents from GitHub`);
+
+    const allEmbeddings = await generateEmbeddings(docs)
+    console.log(`Generated ${allEmbeddings.length} embeddings`);
+    console.log(`Embeddings with null values: ${allEmbeddings.filter(e => !e).length}`);
+
+    const limit = pLimit(10);
+    const results = await Promise.allSettled(
+        allEmbeddings.map((embedding, index) =>
+            limit(async () => {
+                console.log(`processing ${index} of ${allEmbeddings.length}`);
+                if (!embedding) {
+                    console.log(`Skipping null embedding at index ${index}`);
+                    return;
+                }
+
+                // First, upsert the basic data
+                const sourceCodeEmbedding = await db.sourceCodeEmbedding.upsert({
+                    where: {
+                        projectId_fileName: {
+                            projectId,
+                            fileName: embedding.fileName
+                        }
+                    },
+                    update: {
+                        summary: embedding.summary,
+                        sourceCode: embedding.sourceCode,
+                    },
+                    create: {
+                        summary: embedding.summary,
+                        sourceCode: embedding.sourceCode,
+                        fileName: embedding.fileName,
+                        projectId,
+                    }
+                });
+
+                console.log(`Updating embedding for ${embedding.fileName}, embedding length: ${embedding.embeddings?.length}`);
+
+                // Then, update the summaryEmbedding using raw SQL
+                await db.$executeRaw`
+                UPDATE "SourceCodeEmbedding"
+                SET "summaryEmbedding" = ${embedding.embeddings}::vector
+                WHERE id = ${sourceCodeEmbedding.id}
+            `;
+            })
+        )
+    );
+
+    const failed = results.filter(r => r.status === 'rejected');
+    if (failed.length > 0) {
+        console.log(`Failed to process ${failed.length} files:`);
+        failed.forEach((f: any) => console.log(f.reason));
+    }
+
+    console.log(`Successfully indexed ${results.filter(r => r.status === 'fulfilled').length} files`);
+}
+
+
+
+async function generateEmbeddings(docs: Awaited<ReturnType<typeof loadGithubRepo>>) {
+    return await Promise.all(docs.map(async (doc) => {
+        try {
+            const summary = await getSummary(doc);
+            if (!summary) {
+                console.log(`No summary generated for ${doc.metadata.source}`);
+                return null;
+            }
+            const embeddings = await getGeminiEmbeddings(summary);
+            console.log(`Generated embedding for ${doc.metadata.source}, length: ${embeddings?.length}`);
+            return {
+                summary,
+                embeddings,
+                sourceCode: JSON.parse(JSON.stringify(doc.pageContent)),
+                fileName: doc.metadata.source,
+            };
+        } catch (error) {
+            console.error(`Error generating embedding for ${doc.metadata.source}:`, error);
+            return null;
+        }
+    }));
+}
+// console.log("done")
+
+// const query = 'what env is needed for this project?'
+
+
+// const embedding = await getEmbeddings(query)
+// const vectorQuery = `[${embedding.join(',')}]`
+
+// const result = await db.$queryRaw`
+//   SELECT
+//     id,
+//     summary,
+//     1 - ("summaryEmbedding" <=> ${vectorQuery}::vector) as similarity
+//   FROM "SourceCodeEmbedding"
+//   where 1 - ("summaryEmbedding" <=> ${vectorQuery}::vector) > .5
+//   ORDER BY  similarity DESC
+//   LIMIT 10;
+// `
+// console.log(result)

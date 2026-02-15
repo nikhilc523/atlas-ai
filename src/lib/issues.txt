@@ -1,0 +1,709 @@
+  at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.$executeRaw()` invocation:
+
+
+Raw query failed. Code: `22000`. Message: `ERROR: expected 768 dimensions, not 3072`
+    at $n.handleRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:7315)
+    at $n.handleAndLogRequestError (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6623)
+    at $n.request (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:121:6307)
+    at async l (/Users/nikhilchowdary/Downloads/dionysus2/node_modules/@prisma/client/runtime/library.js:130:9633)
+    at async (turbopack://[project]/src/lib/github-loader.ts:117:16)
+  115 |
+  116 |                 // Then, update the summaryEmbedding using raw SQL
+> 117 |                 await db.$executeRaw`
+      |                ^
+  118 |                 UPDATE "SourceCodeEmbedding"
+  119 |                 SET "summaryEmbedding" = ${embedding.embeddings}::vector
+  120 |                 WHERE id = ${sourceCodeEmbedding.id} {
+  code: 'P2010',
+  clientVersion: '5.22.0',
+  meta: [Object]
+}
+Successfully indexed 0 files
